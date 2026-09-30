@@ -59,6 +59,8 @@ DOMAIN-SUFFIX,x.ai
 DOMAIN-SUFFIX,muse.ai
 # Meta 模型 API（Muse Spark，第三方集成文档提及）
 DOMAIN,api.meta.ai
+# 手机 App 后端（Android 包名 com.facebook.aura，用户手机 Clash 实测流量；上游 DOMAIN-SUFFIX,meta.ai 已覆盖，此处显式列出）
+DOMAIN,hatch-api.meta.ai
 
 # ── 自维护增量 B：Anthropic Claude（含手机 App / Claude Code CLI）──
 # 网页端：claude.ai（含 www、downloads 等子域，上游 DOMAIN-SUFFIX 已覆盖，此处显式列出便于排查）
