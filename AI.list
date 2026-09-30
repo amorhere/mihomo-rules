@@ -1,0 +1,68 @@
+# 内容：AI平台-国外（含 Muse/Claude 自维护增量）
+# 来源：ACL4SSR AI.list 全量 + 自维护 Muse/Claude 增量（含手机 App / Claude Code CLI）
+# 数量：58条
+# 上游更新时以本文件为准手工同步；Muse/Claude 相关新增域名追加到文末增量区
+
+DOMAIN-KEYWORD,anthropic
+DOMAIN-KEYWORD,claude
+DOMAIN-KEYWORD,openai
+DOMAIN,ai.google.dev
+DOMAIN,aistudio.google.com
+DOMAIN,api.githubcopilot.com
+DOMAIN,api.groq.com
+DOMAIN,api.together.xyz
+DOMAIN,bard.google.com
+DOMAIN,console.groq.com
+DOMAIN,copilot-proxy.githubusercontent.com
+DOMAIN,gemini.google.com
+DOMAIN,generativelanguage.googleapis.com
+DOMAIN,notebooklm.google.com
+DOMAIN,sydney.bing.com
+DOMAIN-SUFFIX,ai.azure.com
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,auth0.com
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,client-api.arkoselabs.com
+DOMAIN-SUFFIX,copilot.cloud.microsoft
+DOMAIN-SUFFIX,copilot.microsoft.com
+DOMAIN-SUFFIX,cursor.com
+DOMAIN-SUFFIX,cursor.sh
+DOMAIN-SUFFIX,events.statsigapi.net
+DOMAIN-SUFFIX,featuregates.org
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,grazie.ai
+DOMAIN-SUFFIX,grazie.aws.intellij.net
+DOMAIN-SUFFIX,identrust.com
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,jetbrains.ai
+DOMAIN-SUFFIX,makersuite.google.com
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,mistral.ai
+DOMAIN-SUFFIX,notebooklm.google
+DOMAIN-SUFFIX,notebooklm.google.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,sora.com
+DOMAIN-SUFFIX,x.ai
+
+# ── 自维护增量：Muse / Claude（含手机 App / Claude Code CLI）──
+# 网页端：claude.ai（含 www、downloads 等子域，上游 DOMAIN-SUFFIX 已覆盖，此处显式列出便于排查）
+DOMAIN,www.claude.ai  # 网页端主站
+DOMAIN,downloads.claude.ai  # Claude Code 插件/安装包下载、自动更新检查
+# 手机 App（iOS/Android）：后端走 claude.ai，登录经 claude.com OAuth
+DOMAIN,platform.claude.com  # Console/OAuth token 交换、刷新与吊销（含手机 App 登录）
+DOMAIN,code.claude.com  # Claude Code 文档/指引（含 App 内帮助）
+# Claude Code CLI / API（含手机端可能直连的 API）
+DOMAIN,api.anthropic.com  # Anthropic 主 API（含 Claude Code CLI、手机 App）
+DOMAIN,console.anthropic.com  # 认证与用户管理
+DOMAIN,statsig.anthropic.com  # 功能开关/遥测
+DOMAIN,mcp-proxy.anthropic.com  # MCP 连接器
+DOMAIN,bridge.claudeusercontent.com  # Claude in Chrome 扩展 WebSocket 桥
