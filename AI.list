@@ -55,14 +55,14 @@ DOMAIN-SUFFIX,x.ai
 
 # ── 自维护增量：Muse / Claude（含手机 App / Claude Code CLI）──
 # 网页端：claude.ai（含 www、downloads 等子域，上游 DOMAIN-SUFFIX 已覆盖，此处显式列出便于排查）
-DOMAIN,www.claude.ai  # 网页端主站
-DOMAIN,downloads.claude.ai  # Claude Code 插件/安装包下载、自动更新检查
+DOMAIN,www.claude.ai
+DOMAIN,downloads.claude.ai
 # 手机 App（iOS/Android）：后端走 claude.ai，登录经 claude.com OAuth
-DOMAIN,platform.claude.com  # Console/OAuth token 交换、刷新与吊销（含手机 App 登录）
-DOMAIN,code.claude.com  # Claude Code 文档/指引（含 App 内帮助）
+DOMAIN,platform.claude.com
+DOMAIN,code.claude.com
 # Claude Code CLI / API（含手机端可能直连的 API）
-DOMAIN,api.anthropic.com  # Anthropic 主 API（含 Claude Code CLI、手机 App）
-DOMAIN,console.anthropic.com  # 认证与用户管理
-DOMAIN,statsig.anthropic.com  # 功能开关/遥测
-DOMAIN,mcp-proxy.anthropic.com  # MCP 连接器
-DOMAIN,bridge.claudeusercontent.com  # Claude in Chrome 扩展 WebSocket 桥
+DOMAIN,api.anthropic.com
+DOMAIN,console.anthropic.com
+DOMAIN,statsig.anthropic.com
+DOMAIN,mcp-proxy.anthropic.com
+DOMAIN,bridge.claudeusercontent.com
