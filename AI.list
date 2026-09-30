@@ -1,7 +1,8 @@
-# 内容：AI平台-国外（含 Muse/Claude 自维护增量）
-# 来源：ACL4SSR AI.list 全量 + 自维护 Muse/Claude 增量（含手机 App / Claude Code CLI）
-# 数量：58条
-# 上游更新时以本文件为准手工同步；Muse/Claude 相关新增域名追加到文末增量区
+# 内容：AI平台-国外（含 Meta Muse / Anthropic Claude 自维护增量）
+# 来源：ACL4SSR AI.list 全量 + 自维护增量
+# 数量：60条
+# 上游更新时以本文件为准手工同步；新增域名追加到文末对应增量区
+# 注意：Meta 的 Muse（muse.ai，2026-09-08 发布的个人 AI 智能体）与 Anthropic 的 Claude 是两个产品，分区维护
 
 DOMAIN-KEYWORD,anthropic
 DOMAIN-KEYWORD,claude
@@ -53,7 +54,13 @@ DOMAIN-SUFFIX,perplexity.ai
 DOMAIN-SUFFIX,sora.com
 DOMAIN-SUFFIX,x.ai
 
-# ── 自维护增量：Muse / Claude（含手机 App / Claude Code CLI）──
+# ── 自维护增量 A：Meta Muse（网页端 muse.ai；手机 App 域名待从实际流量确认后补充）──
+# 网页端主站（已用自家浏览器访问验证）
+DOMAIN-SUFFIX,muse.ai
+# Meta 模型 API（Muse Spark，第三方集成文档提及）
+DOMAIN,api.meta.ai
+
+# ── 自维护增量 B：Anthropic Claude（含手机 App / Claude Code CLI）──
 # 网页端：claude.ai（含 www、downloads 等子域，上游 DOMAIN-SUFFIX 已覆盖，此处显式列出便于排查）
 DOMAIN,www.claude.ai
 DOMAIN,downloads.claude.ai
