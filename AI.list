@@ -1,128 +1,46 @@
-# 内容：AI平台-国外（含 Meta Muse / Anthropic Claude 自维护增量）
-# 来源：ACL4SSR AI.list 全量 + 自维护增量
-# 数量：102条
-# 上游更新时以本文件为准手工同步；新增域名追加到文末对应增量区
-# 注意：Meta 的 Muse（muse.ai，2026-09-08 发布的个人 AI 智能体）与 Anthropic 的 Claude 是两个产品，分区维护
-# Muse 域名来源（2026-09-30）：三端 App 静态拆包 + Wardle 实时 PoC + 用户手机实测流量；其中 Stripe 支付域名、graph.facebook.com 等共用基础设施、以及归属未验证的猜测性域名按来源建议未收录
+# ==========================================
+# Other AI Platforms (OpenAI, Claude, Copilot, Perplexity, etc.)
+# Excludes: MUSE, Gemini
+# ==========================================
 
-DOMAIN-KEYWORD,anthropic
-DOMAIN-KEYWORD,claude
-DOMAIN-KEYWORD,openai
-DOMAIN,ai.google.dev
-DOMAIN,aistudio.google.com
-DOMAIN,api.githubcopilot.com
-DOMAIN,api.groq.com
-DOMAIN,api.together.xyz
-DOMAIN,bard.google.com
-DOMAIN,console.groq.com
-DOMAIN,copilot-proxy.githubusercontent.com
-DOMAIN,gemini.google.com
-DOMAIN,generativelanguage.googleapis.com
-DOMAIN,notebooklm.google.com
-DOMAIN,sydney.bing.com
-DOMAIN-SUFFIX,ai.azure.com
-DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,auth0.com
-DOMAIN-SUFFIX,bard.google.com
+# OpenAI / ChatGPT
+DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,chatgpt.com
-DOMAIN-SUFFIX,claude.ai
-DOMAIN-SUFFIX,claude.com
-DOMAIN-SUFFIX,claudeusercontent.com
-DOMAIN-SUFFIX,client-api.arkoselabs.com
-DOMAIN-SUFFIX,copilot.cloud.microsoft
-DOMAIN-SUFFIX,copilot.microsoft.com
-DOMAIN-SUFFIX,cursor.com
-DOMAIN-SUFFIX,cursor.sh
-DOMAIN-SUFFIX,events.statsigapi.net
-DOMAIN-SUFFIX,featuregates.org
-DOMAIN-SUFFIX,gemini.google.com
-DOMAIN-SUFFIX,grazie.ai
-DOMAIN-SUFFIX,grazie.aws.intellij.net
-DOMAIN-SUFFIX,identrust.com
-DOMAIN-SUFFIX,intercom.io
-DOMAIN-SUFFIX,intercomcdn.com
-DOMAIN-SUFFIX,jetbrains.ai
-DOMAIN-SUFFIX,makersuite.google.com
-DOMAIN-SUFFIX,meta.ai
-DOMAIN-SUFFIX,mistral.ai
-DOMAIN-SUFFIX,notebooklm.google
-DOMAIN-SUFFIX,notebooklm.google.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
-DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-KEYWORD,openaicom
+
+# Anthropic / Claude
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-KEYWORD,anthropic
+DOMAIN-KEYWORD,claude
+
+# Microsoft Copilot
+DOMAIN-SUFFIX,copilot.microsoft.com
+DOMAIN-SUFFIX,edgeservices.bing.com
+DOMAIN-SUFFIX,sydney.bing.com
+
+# Perplexity AI
 DOMAIN-SUFFIX,perplexity.ai
-DOMAIN-SUFFIX,sora.com
-DOMAIN-SUFFIX,x.ai
 
-# ── 自维护增量 A：Meta Muse（网页 muse.ai；iOS com.facebook.hatch；Android com.facebook.aura；Mac com.meta.endo）──
-# 证据分级：A=拆包/实测/PoC 验证（本区全部为 A 级）；未收录：Stripe 支付域名（第三方通用，加了会劫持所有网站的支付流量）、graph.facebook.com 等共用基础设施、归属未验证的猜测性域名
-# 说明：部分域名上游已有 DOMAIN-SUFFIX,meta.ai / DOMAIN-SUFFIX,muse.ai 覆盖，此处显式列出便于排障审计
-# 网页端
-DOMAIN-SUFFIX,muse.ai
-DOMAIN,production.museai.com
-DOMAIN,voice.museai.com
-# App 主 API（hatch-api.meta.ai 经用户手机 Clash 实测流量验证：com.facebook.aura → :443）
-DOMAIN,hatch-api.meta.ai
-DOMAIN,api.muse.ai
-DOMAIN,agent.meta.ai
-DOMAIN,hatch.meta.ai
-DOMAIN,api.meta.ai
-# Agent 云端虚拟机 WSS 网关（Wardle 实时 PoC 验证）
-DOMAIN,hatch.metaaivm.com
-DOMAIN-SUFFIX,metaaivm.com
-# 语音听写 / 实时语音（shortwave 经 Wardle 实时 PoC 验证；其余三端拆包）
-DOMAIN,shortwave.facebook.com
-DOMAIN,shortwave.meta.ai
-DOMAIN,genai-hatch-realtime.facebook.com
-DOMAIN,genai-kepler-realtime.facebook.com
-DOMAIN,genai-waveform-realtime.facebook.com
-DOMAIN,meta-ai-realtime.facebook.com
-DOMAIN,wearable-ai-realtime.facebook.com
-DOMAIN,mo-realtime.facebook.com
-DOMAIN,edge-stun.facebook.com
-DOMAIN,gateway.facebook.com
-DOMAIN,gateway-edge.meta.com
-DOMAIN,chat-e2ee-mini.facebook.com
-# GraphQL / 鉴权 / 账号中心（App 拆包；均为精确域名，非泛后缀）
-DOMAIN,graph.meta.ai
-DOMAIN,meta.graph.meta.com
-DOMAIN-SUFFIX,graph.meta.com
-DOMAIN,auth.meta.com
-DOMAIN,od.auth.meta.com
-DOMAIN,od.graph.meta.com
-DOMAIN,accounts.meta.com
-DOMAIN,api.accounts.meta.com
-DOMAIN,accountscenter.meta.com
-# 上传 / 用户内容
-DOMAIN,rupload.meta.ai
-DOMAIN-SUFFIX,metaaiusercontent.com
-DOMAIN-SUFFIX,ecto1usercontent.com
-# 隐私中继 OHTTP（App 内置 allowlist）
-DOMAIN,meta-ohttp-relay-prod.fastly-edge.com
-DOMAIN,meta-ohttp-relay-dev.fastly-edge.com
-DOMAIN,meta-ohttp-config-prod.fastly-edge.com
-DOMAIN,meta.privacy-gateway.cloudflare.com
-DOMAIN,meta.hpke-keys.privacy-gateway.cloudflare.com
-# 内部代号主机（Mac 端拆包 HATCH_DOMAINS）
-DOMAIN,hatch.ecto1.ai
-DOMAIN,hatch.club
-DOMAIN,ecto1.meta.ai
-# Meta AI 网页版（同 Meta 网络；AI 平台相关）
-DOMAIN,ai.meta.com
-# Tier B：launch-time DNS 单次捕获
-DOMAIN,edge-metaclaw-http.c10r.facebook.com
+# Groq
+DOMAIN-SUFFIX,groq.com
 
-# ── 自维护增量 B：Anthropic Claude（含手机 App / Claude Code CLI）──
-# 网页端：claude.ai（含 www、downloads 等子域，上游 DOMAIN-SUFFIX 已覆盖，此处显式列出便于排查）
-DOMAIN,www.claude.ai
-DOMAIN,downloads.claude.ai
-# 手机 App（iOS/Android）：后端走 claude.ai，登录经 claude.com OAuth
-DOMAIN,platform.claude.com
-DOMAIN,code.claude.com
-# Claude Code CLI / API（含手机端可能直连的 API）
-DOMAIN,api.anthropic.com
-DOMAIN,console.anthropic.com
-DOMAIN,statsig.anthropic.com
-DOMAIN,mcp-proxy.anthropic.com
-DOMAIN,bridge.claudeusercontent.com
+# Mistral AI
+DOMAIN-SUFFIX,mistral.ai
+
+# Coze / ByteDance Overseas AI
+DOMAIN-SUFFIX,coze.com
+DOMAIN-SUFFIX,ciciai.com
+
+# Midjourney
+DOMAIN-SUFFIX,midjourney.com
+
+# Suno
+DOMAIN-SUFFIX,suno.ai
+DOMAIN-SUFFIX,suno.com
+
+# Poe
+DOMAIN-SUFFIX,poe.com
